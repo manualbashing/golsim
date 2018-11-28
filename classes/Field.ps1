@@ -1,4 +1,4 @@
-class Field 
+﻿class Field 
 {
     [bool]$State
     [bool]$PredictedNextState
@@ -72,10 +72,10 @@ class Field
 
     [string]ToString() 
     {
-        $stateString = ' '
+        $stateString = '  '
         if ($this.State) 
         {
-            $stateString = 'X'    
+            $stateString = '██'    
         }
         return $stateString
     }
