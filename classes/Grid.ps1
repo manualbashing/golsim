@@ -4,6 +4,7 @@ class Grid
     [int]$Height
     [int]$Width
     [String]$Init
+    [bool]$Random
 
     [void]_initFields()
     {

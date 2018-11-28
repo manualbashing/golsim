@@ -5,9 +5,9 @@ class Game
     [int]$Delay
     
 
-    Game ([int]$Height, [int]$Width, [int]$Iteration, [int]$Delay) 
+    Game ([int]$Height, [int]$Width, [bool]$Random, [int]$Iteration, [int]$Delay) 
     {
-        $this.Grid = [Grid]::new($Height,$Width)
+        $this.Grid = [Grid]::new($Height,$Width,$Random)
         $this.Iteration = $Iteration
         $this.Delay = $Delay
     }
