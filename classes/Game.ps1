@@ -29,15 +29,13 @@ class Game
     StartGame()
     {
         Clear-Host
-        Write-Host "Iteration: "
-        Write-Host $this.Grid.ToString()
-        
+        Write-Host $this.Grid.ToString()        
         for ($i = 1; $i -le $this.Iteration; $i++) 
         {
             $this.Grid.NextState()
             Clear-Host
-            Write-Host "Iteration: $i"
             Write-Host $this.Grid.ToString()
+            Write-Host ('Iteration: {0}/{1}' -f $i,$this.Iteration)
             Start-Sleep -Milliseconds $this.Delay
         }
     }
